@@ -17,7 +17,8 @@ module.exports = {
             { test: /\.css$/, use: ["style-loader", "css-loader"] },
             { test: /\.scss$/, use: ["stryle-loader", "css-loader", "scss-loader"] },
             { 
-                test: /\.(png|gif|jpg)$/, 
+                test: /\.(png|gif|jpg)$/,
+                dependency: { not: ["url"] },
                 use: { 
                     loader: "url-loader", 
                     options: { 
