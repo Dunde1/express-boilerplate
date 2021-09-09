@@ -4,6 +4,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     mode: "production",
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000,
+        ignored: /node_modules/
+    },
     entry: {
         main: "./src/main.js"
     },
